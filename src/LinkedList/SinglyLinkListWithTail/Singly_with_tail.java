@@ -15,7 +15,8 @@ class Node{
     }
 }
 
-public class LL {
+public class Singly_with_tail {
+
    static Node head=null;
    static Node tail;
 
@@ -57,9 +58,9 @@ public class LL {
        Node temp = head;
         Node n1 = new Node(data);
         if (head == null || pos == 0 || pos ==1)
-            LL.insertAtBegning(data);
+            Singly_with_tail.insertAtBegning(data);
         else if (pos > count())
-            LL.insertAtEnd(data);
+            Singly_with_tail.insertAtEnd(data);
         else{
             for (int i = 1; i < pos-1; i++) {
                 temp = temp.next;
@@ -72,9 +73,9 @@ public class LL {
     public static void insertAtPos(Node n , int pos){
         Node temp = head;
         if (head == null || pos == 0 || pos ==1)
-           LL.insertAtBegning(n.data);
+         insertAtBegning(n.data);
         else if (pos > count())
-            LL.insertAtEnd(n.data);
+           insertAtEnd(n.data);
         else {
             for (int i = 1; i < pos-1; i++) {
                 temp = temp.next;
@@ -113,9 +114,9 @@ public class LL {
        if (head == null)
            return head;
      else   if (pos == 0 || pos == 1)
-          return LL.deleteAtBegening();
+          return deleteAtBegening();
        else if (pos > count())
-          return LL.deleteAtEnd();
+          return deleteAtEnd();
        else {
                Node temp = head, t;
                for (int i = 1; i < pos - 1; i++) {
@@ -259,38 +260,39 @@ public class LL {
         }
     }
     public static void main(String[] args) {
-        LL.insertAtBegning(50);
-        LL.insertAtBegning(40);
-        LL.insertAtBegning(30);
-        LL.insertAtBegning(20);
-        LL.insertAtBegning(10);
+        insertAtBegning(50);
+        insertAtBegning(40);
+        insertAtBegning(30);
+        insertAtBegning(20);
+        insertAtBegning(10);
 
-//        LL.insertAtEnd(248);
-//        LL.insertAtEnd(24558);
+//        insertAtEnd(248);
+//        insertAtEnd(24558);
 
-        //LL.insertAtPos(888,3);
-       // LL.display();
+        //insertAtPos(888,3);
+       // display();
 
-        ///LL.insertAtPos(new Node(999),3);
+        ///insertAtPos(new Node(999),3);
 
-        //System.out.println(LL.deleteAtBegening());
+      //  System.out.println(deleteAtBegening());
 
-      //  System.out.println(LL.deleteAtEnd());
 
-        //System.out.println(LL.deleteAtPos(6));
+      //  System.out.println(deleteAtEnd());
 
-       // System.out.println(LL.deleteAtPoss(550));
+        //System.out.println(deleteAtPos(6));
 
-        //System.out.println(LL.deleteAtPosition(new Node(78)));
+       // System.out.println(deleteAtPoss(550));
 
-       // System.out.println(LL.search(454));
+        //System.out.println(deleteAtPosition(new Node(78)));
 
-//        System.out.println(LL.searchPos(10));
+       // System.out.println(search(454));
 
-//        System.out.println(LL.search(new Node(10)));
+//        System.out.println(searchPos(10));
 
-        System.out.println(LL.searchPos(new Node(5)));
-        LL.display();
+//        System.out.println(search(new Node(10)));
+
+       // System.out.println(searchPos(new Node(5)));
+        display();
     }
 }
 
