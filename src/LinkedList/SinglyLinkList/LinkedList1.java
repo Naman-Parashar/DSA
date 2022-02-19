@@ -1,4 +1,4 @@
-package LinkedList;//class Node{
+package LinkedList.SinglyLinkList;//class Node{
 //   private int data;
 //   private Node next;
 //    Node(int data){

@@ -1,4 +1,5 @@
-package LinkedList;
+package LinkedList.SinglyLinkList;
+
 class Node1 {
     private static Node1 head;
     private int data;
