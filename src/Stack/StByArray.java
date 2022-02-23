@@ -1,7 +1,7 @@
 package Stack;
 
 class stsck{
-   private int arr[];
+   private  int[] arr;
     private int top;
 
      stsck(int size){
@@ -10,17 +10,11 @@ class stsck{
     }
 
     private boolean isFull(){
-        if(top == arr.length-1)
-            return true;
-        else
-            return false;
+         return top == arr.length-1;
     }
 
     private boolean isEmpty(){
-        if (top == -1)
-            return true;
-        else
-            return false;
+        return top == -1;
     }
 
     public void push(int data){
@@ -73,7 +67,7 @@ public class StByArray {
 
         System.out.println("Deleted Element = "+obj.pop());
 
-       // System.out.println(obj.peek());
+        System.out.println(obj.peek());
         obj.display();
     }
 }
