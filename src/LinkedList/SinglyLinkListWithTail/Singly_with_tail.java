@@ -1,15 +1,15 @@
 package LinkedList.SinglyLinkListWithTail;
 
-class Node{
+class Node88 {
     int data;
-    Node next;
+    Node88 next;
 
     @Override
     public String toString() {
         return data+"";
     }
 
-    public Node(int data){
+    public Node88(int data){
         this.data = data;
         next = null;
     }
@@ -17,11 +17,11 @@ class Node{
 
 public class Singly_with_tail {
 
-   static Node head=null;
-   static Node tail;
+   static Node88 head=null;
+   static Node88 tail;
 
    public static int count(){
-       Node temp = head;
+       Node88 temp = head;
        int c =0;
        while (temp != null) {
            c++;
@@ -31,7 +31,7 @@ public class Singly_with_tail {
    }
 
    public static void insertAtBegning(int data){
-       Node n1 = new Node(data);
+       Node88 n1 = new Node88(data);
        if (head == null){
            head = n1;
            tail = n1;
@@ -43,7 +43,7 @@ public class Singly_with_tail {
    }
 
     public static void insertAtEnd(int data){
-       Node n1 = new Node(data);
+       Node88 n1 = new Node88(data);
        if (head == null){
            head =n1;
            tail = n1;
@@ -55,8 +55,8 @@ public class Singly_with_tail {
     }
 
     public static void insertAtPos(int data , int pos){
-       Node temp = head;
-        Node n1 = new Node(data);
+       Node88 temp = head;
+        Node88 n1 = new Node88(data);
         if (head == null || pos == 0 || pos ==1)
             Singly_with_tail.insertAtBegning(data);
         else if (pos > count())
@@ -70,8 +70,8 @@ public class Singly_with_tail {
         }
     }
 
-    public static void insertAtPos(Node n , int pos){
-        Node temp = head;
+    public static void insertAtPos(Node88 n , int pos){
+        Node88 temp = head;
         if (head == null || pos == 0 || pos ==1)
          insertAtBegning(n.data);
         else if (pos > count())
@@ -85,23 +85,23 @@ public class Singly_with_tail {
         }
     }
 
-    public static Node deleteAtBegening(){
+    public static Node88 deleteAtBegening(){
        if (head == null){
            return head;
        }
        else{
-       Node temp = head;
+       Node88 temp = head;
        head = head.next;
        return temp;
       }
    }
 
-    public static Node deleteAtEnd(){
+    public static Node88 deleteAtEnd(){
         if (head == null){
             return head;
         }
         else{
-            Node temp = tail;
+            Node88 temp = tail;
             tail = head;
             while (tail.next.next != null)
                 tail = tail.next;
@@ -110,7 +110,7 @@ public class Singly_with_tail {
         }
     }
 
-   public static Node deleteAtPos(int pos) {
+   public static Node88 deleteAtPos(int pos) {
        if (head == null)
            return head;
      else   if (pos == 0 || pos == 1)
@@ -118,7 +118,7 @@ public class Singly_with_tail {
        else if (pos > count())
           return deleteAtEnd();
        else {
-               Node temp = head, t;
+               Node88 temp = head, t;
                for (int i = 1; i < pos - 1; i++) {
                    temp = temp.next;
                }
@@ -128,11 +128,11 @@ public class Singly_with_tail {
        }
    }
 
-    public static Node deleteAtPoss(int data) {
+    public static Node88 deleteAtPoss(int data) {
         if (head == null)
             return head;
         else {
-            Node temp = head, p = null;
+            Node88 temp = head, p = null;
             if (head.data == data) {
                 p =head;
                 head = head.next;
@@ -155,8 +155,8 @@ public class Singly_with_tail {
         }
     }
 
-    public static Node deleteAtPosition(Node n){
-       Node temp = head , p = null;
+    public static Node88 deleteAtPosition(Node88 n){
+       Node88 temp = head , p = null;
         if (head == null)
             return head;
         else {
@@ -186,7 +186,7 @@ public class Singly_with_tail {
        if (head == null)
            return false;
        else {
-           Node temp = head;
+           Node88 temp = head;
            while (temp != null)
            {
                if (data == temp.data)
@@ -202,7 +202,7 @@ public class Singly_with_tail {
         if (head == null)
             return -1;
         else {
-            Node temp = head;
+            Node88 temp = head;
             while (temp != null)
             {
                 s++;
@@ -214,11 +214,11 @@ public class Singly_with_tail {
         }
     }
 
-    public static boolean search(Node n){
+    public static boolean search(Node88 n){
         if (head == null)
             return false;
         else {
-            Node temp = head;
+            Node88 temp = head;
             while (temp != null)
             {
                 if (n.data == temp.data)
@@ -229,12 +229,12 @@ public class Singly_with_tail {
         }
     }
 
-    public static int searchPos(Node n){
+    public static int searchPos(Node88 n){
        int s=0;
         if (head == null)
             return -1;
         else {
-            Node temp = head;
+            Node88 temp = head;
             while (temp != null)
             {
                 s++;
@@ -251,7 +251,7 @@ public class Singly_with_tail {
         if (head == null)
             System.out.println("No Element");
         else {
-            Node temp = head;
+            Node88 temp = head;
             while (temp != null){
                 System.out.print(temp.data+"--->");
                 temp = temp.next;
