@@ -11,13 +11,15 @@ class Node9 {
 
     public static void create() {
         head = new Node9(20);
-        Node9 n2 = new Node9(20);
-        Node9 n3 = new Node9(20);
-        Node9 n4 = new Node9(40);
+        Node9 n2 = new Node9(30);
+        Node9 n3 = new Node9(340);
+        Node9 n4 = new Node9(30);
+        Node9 n5 = new Node9(40);
 
         head.next = n2;
         n2.next = n3;
         n3.next = n4;
+        n4.next = n5;
     }
 
     public static void removeD(){

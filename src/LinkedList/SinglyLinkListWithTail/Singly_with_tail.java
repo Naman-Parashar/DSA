@@ -19,6 +19,7 @@ public class Singly_with_tail {
 
    static Node88 head=null;
    static Node88 tail;
+   static int size = 0;
 
    public static int count(){
        Node88 temp = head;
@@ -28,6 +29,15 @@ public class Singly_with_tail {
            temp = temp.next;
        }
        return c;
+   }
+
+  //static Node88 temp = head;
+   // static int c =0 ;
+   public static int countt(Node88 n){
+       if (n==null)
+           return 0;
+       else
+           return 1 + countt(n.next);
    }
 
    public static void insertAtBegning(int data){
@@ -40,6 +50,7 @@ public class Singly_with_tail {
            n1.next = head;
            head = n1;
        }
+       size++;
    }
 
     public static void insertAtEnd(int data){
@@ -52,6 +63,7 @@ public class Singly_with_tail {
            tail.next = n1;
            tail = n1;
        }
+       size++;
     }
 
     public static void insertAtPos(int data , int pos){
@@ -68,6 +80,7 @@ public class Singly_with_tail {
             n1.next = temp.next;
             temp.next = n1;
         }
+        size++;
     }
 
     public static void insertAtPos(Node88 n , int pos){
@@ -83,6 +96,7 @@ public class Singly_with_tail {
             n.next = temp.next;
             temp.next = n;
         }
+        size++;
     }
 
     public static Node88 deleteAtBegening(){
@@ -92,6 +106,7 @@ public class Singly_with_tail {
        else{
        Node88 temp = head;
        head = head.next;
+       size--;
        return temp;
       }
    }
@@ -106,6 +121,7 @@ public class Singly_with_tail {
             while (tail.next.next != null)
                 tail = tail.next;
             tail.next=null;
+            size--;
             return temp;
         }
     }
@@ -124,6 +140,7 @@ public class Singly_with_tail {
                }
                t = temp.next;
                temp.next = temp.next.next;
+               size--;
                return t;
        }
    }
@@ -293,6 +310,8 @@ public class Singly_with_tail {
 
        // System.out.println(searchPos(new Node(5)));
         display();
+
+        System.out.println(countt(head));
     }
 }
 

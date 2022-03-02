@@ -1,5 +1,7 @@
 package LinkedList.SinglyLinkList;
 
+import java.lang.reflect.Type;
+
 class Node8 {
     private static Node8 head;
     private int data;
@@ -50,6 +52,7 @@ class Node8 {
             System.out.print("null");
         }
     }
+
 
 }
 public class Reverse {

@@ -103,6 +103,7 @@ public class Doubly_LinkList_Without_Tail {
                DNode temp = head;
                head = head.next;
                head.pre = null;
+               temp.next=null;
                return temp.data;
            }
        }

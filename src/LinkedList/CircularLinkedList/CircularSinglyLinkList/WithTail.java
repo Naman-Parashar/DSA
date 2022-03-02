@@ -203,7 +203,7 @@ public class WithTail {
 
 //        insertAtPos(999,4);
 
-//        insertAtPos(new CNode(8787),2);
+        insertAtPos(new CNode(8787),3);
 
 
 //        System.out.println(deleteAtBegning());

@@ -1,23 +1,23 @@
 package Stack;
 
 class stsck{
-   private  int[] arr;
-    private int top;
+   private  static int[] arr;
+    private static int top;
 
      stsck(int size){
         arr = new int[size];
         top = -1;
     }
 
-    private boolean isFull(){
+    private static boolean isFull(){
          return top == arr.length-1;
     }
 
-    private boolean isEmpty(){
+    private static boolean isEmpty(){
         return top == -1;
     }
 
-    public void push(int data){
+    public static void push(int data){
         if (isFull())
             System.out.println("Stack is full");
         else if (isEmpty()){
@@ -30,7 +30,7 @@ class stsck{
         }
     }
 
-    public int pop(){
+    public static int pop(){
          if (isEmpty()) {
              return -1;
          }
@@ -41,11 +41,11 @@ class stsck{
          }
      }
 
-    public int peek(){
+    public static int peek(){
         return arr[top];
     }
 
-    public void display() {
+    public static void display() {
         if (isEmpty())
             System.out.println("stack is empty");
         else {

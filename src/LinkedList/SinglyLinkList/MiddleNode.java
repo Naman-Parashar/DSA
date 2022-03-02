@@ -14,18 +14,18 @@ class Node10 {
     public static void create() {
         head = new Node10(10);
         Node10 n2 = new Node10(20);
-        Node10 n3 = new Node10(30);
-        Node10 n4 = new Node10(40);
-        Node10 n5 = new Node10(50);
-        Node10 n6 = new Node10(50);
-        Node10 n7 = new Node10(50);
+//        Node10 n3 = new Node10(30);
+//        Node10 n4 = new Node10(40);
+//        Node10 n5 = new Node10(50);
+//        Node10 n6 = new Node10(50);
+     //   Node10 n7 = new Node10(50);
 
         head.next = n2;
-        n2.next = n3;
-        n3.next = n4;
-        n4.next = n5;
-        n5.next = n6;
-        n6.next = n7;
+//        n2.next = n3;
+//        n3.next = n4;
+//        n4.next = n5;
+//        n5.next = n6;
+//        n6.next = n7;
     }
 
     public static void middele() {
