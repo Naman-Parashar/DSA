@@ -1,5 +1,4 @@
 package Assignment;
-import java.util.Scanner;
 
 class Node7{
     int count;
@@ -10,8 +9,8 @@ class Node7{
         this.sum = sum;
     }
 }
-public class QueueClass{
-   static Node7 fromt;
+public class QueueClass {
+   static Node7 front;
    static Node7 rear;
     public static boolean isPrime(int a) {
         if (a == 0 || a == 1)
@@ -28,12 +27,41 @@ public class QueueClass{
 
     public static void enQueue(int count , int sum){
         Node7 n  = new Node7(count,sum);
-        if (fromt== null){
-            fromt =n;
+        if (front == null){
+            front =n;
             rear = n;
         }
         else {
+            if (rear.sum > n.sum){
+                n.next = rear;
+                rear = n;
+            }
+            else {
+                Node7 temp = front;
+                if (temp.sum < n.sum){
+                    n.next = front;
+                    front = n;
+                }
+                else {
+                    while (temp.next != null){
+                        if (temp.next.sum <= n.sum){
+                            n.next = temp.next;
+                            temp.next = n;
+                            break;
+                        }
 
+                        else temp = temp.next;
+                    }
+                }
+            }
+        }
+    }
+
+    public static void disp(){
+        Node7 tem = front;
+        while (tem != null){
+            System.out.print("("+tem.count+" "+ tem.sum+")"+"-->");
+            tem = tem.next;
         }
     }
 
@@ -41,40 +69,40 @@ public class QueueClass{
 //        Scanner sc = new Scanner(System.in);
 //        System.out.println("Enter the size of array");
 //        int size = sc.nextInt();
-//        int arr[] = new int[size];
+//        int arr[] = new int[size+1];
 //        System.out.println("Enter the size of array");
-//        for (int i = 0; i < args.length; i++) {
+//        for (int i = 0; i < args.length-1; i++) {
 //            arr[i] = sc.nextInt();
 //        }
-        int arr[] = {1,13,4,3,5,7,13};
+         int arr[] = {1,3,4,3,5,8,7,13,9,53,4,5,7,0};
 
-//        int count =0;
-//        int sum = 0;
-//        for (int i = 0; i < arr.length; i++) {
-//            if (isPrime(arr[i])){
-//                count++;
-//                sum = sum+arr[i];
-//            }
-//            else{
-//                if (sum > 0 && count >0)
-//                    System.out.println(count+ "     "+ sum);
-//                sum = count =0;
-//            }
-//        }
-        int i=0,count,sum;
-        while(i<arr.length){
-            if(isPrime(arr[i])){
-                count=sum=0;
-                while(i<arr.length && isPrime(arr[i])){
-                    count++;
-                    sum+=arr[i];
-                    i++;
-                }
-                System.out.println(count+"      "+sum);
+        int count =0;
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (isPrime(arr[i])){
+                count++;
+                sum = sum+arr[i];
             }
-            else i++;
+            else{
+                if (sum > 0 && count >0)
+                   enQueue(count,sum);
+                sum = count =0;
+            }
         }
-
+        disp();
+//        int i=0,count,sum;
+//        while(i<arr.length){
+//            if(isPrime(arr[i])){
+//                count=sum=0;
+//                while(i<arr.length && isPrime(arr[i])){
+//                    count++;
+//                    sum+=arr[i];
+//                    i++;
+//                }
+//                System.out.println(count+"      "+sum);
+//            }
+//            else i++;
+//        }
 
     }
 }
