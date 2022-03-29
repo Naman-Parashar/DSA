@@ -14,7 +14,7 @@ public class fabonacci {
 
     public static void main(String[] args) {
         System.out.print(a+"  "+b);
-        fab(8);
+        fab(9);
     }
 }
 

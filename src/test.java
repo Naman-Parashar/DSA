@@ -7,10 +7,7 @@ import static Stack.StackByLinkList.push;
 
 public class test {
     public static void main(String[] args) {
-        int[] a= {10,20,30,40,50};
-
-        for (int i = 0; i < a.length; i++) {
-            System.out.println(" "+a[i]);
-        }
+       int  s = '8' - '0';
+        System.out.println('8'>'1');
     }
 }
