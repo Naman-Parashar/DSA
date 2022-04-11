@@ -1,6 +1,6 @@
 package Tree.BST;
 class Node3{
-    int data;
+    public int data;
     Node3 left;
     Node3 right;
     Node3(int data){
