@@ -1,5 +1,7 @@
 package Tree;
 
+import java.util.LinkedList;
+
 class Node5 {
     int data;
     Node9 left;
@@ -38,6 +40,8 @@ public class Hight_Of_BT {
         for(int i = 1; i < arr.length; i++) {
             insert(root2,arr[i]);
         }
+        LinkedList<Integer> l = new LinkedList<>();
+        l.get(0);
         System.out.println(height(root2));
     }
 }
