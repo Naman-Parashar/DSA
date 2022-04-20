@@ -15,7 +15,6 @@ public class moveZerosInFront {
         Node54 temp2 = head;
         while (temp != null)
         {
-
             if (temp.data == 0)
             {
                 Node54 curr = temp;
