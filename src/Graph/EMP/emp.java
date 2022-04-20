@@ -5,7 +5,7 @@ public class emp {
     private String name;
     private int sal;
 
-    public void createEmp(int empId , String name , int sal){
+   emp(int empId , String name , int sal){
         this.empId = empId;
         this.name = name;
         this.sal = sal;
