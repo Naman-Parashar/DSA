@@ -23,7 +23,7 @@ public class Selection {
         }
     }
 
-    // Now in above dol we use a extra space so, it became out-place so now we sol it with some octimization
+    // Now in above sol we use a extra space so, it became out-place so now we sol it with some octimization
 
     public static void sSort2(int arr[]){
         for (int i = 0; i < arr.length; i++) {
@@ -47,4 +47,5 @@ public class Selection {
         int arr[] = {50,10,20,70,60,90,54,36,48,35,2};
         sSort2(arr);
     }
+
 }
