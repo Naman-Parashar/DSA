@@ -37,15 +37,15 @@ public class Selection {
             arr[min] = arr[i];
             arr[i] = tem;
         }
-        for (int a:
-                arr) {
-            System.out.print(a+" ");
-        }
     }
 
     public static void main(String[] args) {
         int arr[] = {50,10,20,70,60,90,54,36,48,35,2};
         sSort2(arr);
+        for (int a:
+                arr) {
+            System.out.print(a+" ");
+        }
     }
 
 }

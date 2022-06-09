@@ -2,12 +2,12 @@ package DSA_GFG.Array;
 
 public class AsecondLargestElement {
     public static int m12(int arr[]){
-        int max=arr[0];
+        int max=Integer.MIN_VALUE;
         for (int i = 1; i < arr.length; i++) {
             if (max<arr[i])
                 max=arr[i];
         }
-        int max2=-1;
+        int max2=Integer.MIN_VALUE;
         for (int i = 0; i < arr.length; i++) {
             if (max2<arr[i] && arr[i]!=max)
                 max2=arr[i];

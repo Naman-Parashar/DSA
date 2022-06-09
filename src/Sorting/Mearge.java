@@ -32,7 +32,7 @@ public class Mearge {
         }
 
         // copy the merge array to original array.
-        for (int i = 0,j=si; i < merge.length ; i++,j++) {
+        for (int i = 0,j = si; i < merge.length ; i++,j++) {
             arr[j]= merge[i];
         }
     }

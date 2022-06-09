@@ -1,24 +1,24 @@
 package Tree.BST;
 
-class Node{
+class Node12{
     int data;
-    Node left;
-    Node right;
-    Node(int data){
+    Node12 left;
+    Node12 right;
+    Node12(int data){
         this.data = data;
     }
 }
 public class BST_By_LinkedList  {
-    static Node root;
+    static Node12 root;
 
     public static void insert(int value) {
-        Node n = new Node(value);
+        Node12 n = new Node12(value);
         if (root == null) {
             root = n;
             return;
         } else {
-            Node current = root;
-            Node parent = null;
+            Node12 current = root;
+            Node12 parent = null;
 
             while (true) {
                 parent = current;
@@ -43,19 +43,19 @@ public class BST_By_LinkedList  {
         }
     }
 
-    public static void preOrder(Node root){
+    public static void preOrder(Node12 root){
         if (root == null) return;
         System.out.print(root.data+" ");
         preOrder(root.left);
         preOrder(root.right);
     }
 
-    public static void insert(Node root , Node newNode){
+    public static void insert(Node12 root , Node12 newNode){
 
         if (root == null) { root = newNode; return;}
     }
 
-    public static void insert(Node root , int value){
+    public static void insert(Node12 root , int value){
 
     }
 
