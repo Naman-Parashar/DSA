@@ -22,6 +22,10 @@ public class Hash_Table<t ,y>{
         return (int)key % noOfBucket;
     }
     public void put(t key , y value){
+        if (key == null || value == key) {
+            System.out.println("Null Value/Key Not Allowed ");
+            return;
+        }
         int bucketIndex = hashFunction(key);
         hashNode<t,y> head = bucket[bucketIndex];
 
@@ -42,10 +46,36 @@ public class Hash_Table<t ,y>{
     }
 
     public y get(t key){
+        int bucketIndex = hashFunction(key);
+        hashNode<t,y> head = bucket[bucketIndex];
+
+        while (head != null){
+            if (head.key.equals(key)){
+                return head.value;
+            }
+            head = head.next;
+        }
         return null;
     }
 
     public y remove(t key){
-        return null;
+        int bucketlndex = hashFunction(key);
+        hashNode<t ,y> head = bucket[bucketlndex];
+        hashNode<t,y> previous = null;
+        while(head != null) {
+            if(head.key.equals(key)) {
+                break;
+            }
+            previous = head;
+            head = head.next;
+        }
+        if(head == null){ return null;}
+            size--;
+            if(previous != null) {
+                previous.next= head.next;
+            } else {
+                bucket[bucketlndex] = head.next;
+            }
+            return head.value;
     }
 }
