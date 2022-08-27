@@ -1,12 +1,12 @@
 package Hashing;
 
 public class hashNode<t , y> {
-    private t kay;
-    private y value;
+    protected t key;
+    protected y value;
     hashNode next;
 
     public hashNode(t kay, y value) {
-        this.kay = kay;
+        this.key = kay;
         this.value = value;
     }
 }

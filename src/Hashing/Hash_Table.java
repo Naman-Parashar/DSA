@@ -17,8 +17,28 @@ public class Hash_Table<t ,y>{
 
     private boolean isEmpty(){return size == 0;}
 
-    public void put(t key , y value){
+    private int hashFunction(t key){
 
+        return (int)key % noOfBucket;
+    }
+    public void put(t key , y value){
+        int bucketIndex = hashFunction(key);
+        hashNode<t,y> head = bucket[bucketIndex];
+
+        while (head != null){
+            if (head.key.equals(key)){
+                head.value = value;
+                return;
+            }
+            head = head.next;
+        }
+        size++;
+        head = bucket[bucketIndex];
+
+        // insert at beginning.
+        hashNode<t,y> n = new hashNode<>(key,value);
+        n.next = head;
+        bucket[bucketIndex] = n;
     }
 
     public y get(t key){
