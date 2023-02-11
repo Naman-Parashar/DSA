@@ -38,7 +38,8 @@ public class Mearge {
     }
     public static void divide(int arr[] , int si , int ei){
         // Divide upto 1 element.
-        if(si>=ei) return;
+        if(si >= ei) return;
+        
         int mid = si + (ei - si) /2;   // we use this as when index are very large then we can get space error in (mid=si+ei/2) so we use this.
         divide(arr,si,mid);
         divide(arr,mid+1,ei);
